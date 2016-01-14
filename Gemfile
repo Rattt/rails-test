@@ -12,11 +12,15 @@ gem 'uglifier', '2.7.2'
 gem 'jquery-rails', '4.1.0'
 
 
-gem 'slim', '3.0.6'
+gem 'slim-rails', '3.0.1'
 gem 'rails_12factor', group: :production
 
 
+gem 'date_validator', '0.9.0'
+
+
 group :development, :test do
+  gem 'byebug'
 
   gem 'annotate'
 
@@ -31,10 +35,15 @@ end
 
 group :test do
   gem 'rspec-rails', '~> 3.0.0'
+  gem 'fuubar', '2.0.0'
+
+  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'faker', '1.6.1'
+
   gem 'rspec-expectations', '3.0.4'
   gem 'rspec-rails-caching', '0.3.0'
   gem 'shoulda-matchers', '3.1.0'
-  gem 'factory_girl_rails', '~> 4.5.0'
+
   gem "database_cleaner", '1.5.1'
 end
 
