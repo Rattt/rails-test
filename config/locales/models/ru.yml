@@ -1,0 +1,16 @@
+ru:
+  activerecord:
+        models:
+          books: 'Книги'
+        attributes:
+          book:
+               name: 'Название'
+               description: 'Описание'
+               create_at: 'Время создания'
+
+
+
+
+
+
+

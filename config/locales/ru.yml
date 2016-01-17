@@ -1,0 +1,15 @@
+ru:
+  actions: 'Действия'
+  action:
+        add: 'Добавить'
+        edit: 'Изменить'
+        delete: 'Удалить'
+        back: 'Назад'
+
+  add_new_book: 'Добавить новую книгу'
+  no_books: 'В библиотеке нет книг'
+  book_title: 'Название книги'
+  description: 'Описание'
+  available_books: 'Книги в наличии'
+  editing_book: 'Редактирование книги'
+  editing_books: 'Редактирование книг'

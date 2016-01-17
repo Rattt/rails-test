@@ -9,6 +9,10 @@ Bundler.require(*Rails.groups)
 module RailsTest
   class Application < Rails::Application
 
+    I18n.config.enforce_available_locales = true
+    config.i18n.default_locale = :ru
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+
     config.generators do |g|
       g.helper false
       g.javascripts false
