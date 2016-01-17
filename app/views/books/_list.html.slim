@@ -1,0 +1,21 @@
+h3 = t('available_books')
+hr/
+table.table.table-bordered.table-striped
+  thead
+    tr
+      th = t('activerecord.attributes.book.name')
+      th = t('activerecord.attributes.book.description')
+      th = t('activerecord.attributes.book.create_at')
+      th = t('actions')
+  tbody
+    tr ng-show="!books.length"
+      td colspan="4"  = t('no_books')
+    tr ng-repeat=("book in books | orderBy: '-created_at'")
+      td
+       | <a href="/books/{{ book.id}}/edit">{{ book.name }}</a>
+      td
+       | {{ book.description | limitTo:50 }}
+      td
+       | {{ book.create_at | date:'yyyy.MM.dd' }}
+      td
+        a.btn.btn-danger ng-click="deleteBook($index)"  = t('action.delete')

@@ -1,0 +1,11 @@
+<script>
+  BookShop.provider('serverConfig',function() {
+    var serverUrl= '<%= root_url %>';     //default url
+    this.setServerUrl=function(url) {
+      serverUrl=url;
+    };
+    this.$get=[function(){
+      return {url:serverUrl};
+    }];
+  })
+</script>

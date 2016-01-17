@@ -1,0 +1,7 @@
+<script>
+  BookShop.service('BookAppInitializer', function() {
+    this.book = function() {
+        return <%= @book.to_json.html_safe %>;
+        };
+    });
+</script>

@@ -1,0 +1,33 @@
+= render :partial => 'books_service.js.erb'
+.container
+
+  h1 = t('editing_book')
+
+  div ng-controller="BookEditCtrl"
+    .well
+      h3
+      form ng-submit="updateBook()"
+        .row
+          .col-xs-12
+            input type="file" ng-model="book.cover_image.url"
+          br/
+        br/
+        .row
+          .col-xs-12
+            input.form-control ng-model="book.name" placeholder=("#{t('activerecord.attributes.book.name')}") type="text" value=""  /
+          br/
+        br/
+        p
+         |
+        .row
+          .col-xs-12
+            textarea.form-control cols="50" ng-model="book.description" placeholder="#{t('activerecord.attributes.book.description')}" rows="4"
+
+        .row
+          .col-xs-12.text-center
+            br/
+            input.btn.btn-primary type="Submit" value=("#{t('action.edit')}") /
+
+  = link_to t("action.back"), root_path
+
+

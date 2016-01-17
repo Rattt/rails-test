@@ -1,0 +1,15 @@
+.well
+  h3 = t :add_new_book
+  form ng-submit = "addBook()"
+    .row
+      .col-xs-12
+        input.form-control ng-model = "newBook.name" placeholder = ("#{t(:book_title)}") type="text" /
+      br/
+    br/
+    .row
+      .col-xs-12
+        textarea.form-control cols =" 50" ng-model = "newBook.description" placeholder = "#{t(:description)}" rows = "4"
+    .row
+      .col-xs-12.text-center
+        br/
+        input.btn.btn-primary type = "Submit" value=("#{t('action.add')}") /
