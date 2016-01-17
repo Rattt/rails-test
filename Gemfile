@@ -3,7 +3,7 @@ ruby "2.2.1"
 gem 'rails', '4.2.4'
 
 gem 'pg', '0.18.4'
-gem 'heroku', '3.42.29'
+
 
 gem 'sass-rails', '5.0.4'
 gem 'bootstrap-sass', '~> 3.2.0.2'
