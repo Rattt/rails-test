@@ -12,4 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+
+//= require angular
+//= require angular-resource
+//= require angularjs-file-upload
+//= require bootstrap-sprockets
+
 //= require_tree .
