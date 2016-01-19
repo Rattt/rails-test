@@ -1,0 +1,11 @@
+{
+  "name": "angular-file-upload",
+  "description": "Upload file with AngularJS",
+  "version": "0.0.0",
+  "homepage": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "ng-file-upload-shim": "11.0.1"
+  }
+}

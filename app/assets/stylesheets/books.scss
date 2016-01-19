@@ -1,3 +1,17 @@
 textarea {
   resize: vertical;
 }
+
+div.thumb {
+  float: left;
+  margin: -0.5em 1em 1.5em 0;
+  padding-bottom: 1em;
+  height: 100px;
+  width: 100px;
+
+  img{
+    height: 100px;
+    width: 100px;
+    padding: 1em;
+  }
+}

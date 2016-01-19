@@ -1,4 +1,4 @@
-var BookShop = angular.module('BookShop', ['ngResource','angularFileUpload']);
+var BookShop = angular.module('BookShop', ['ngResource','ngFileUpload']);
 
 
 

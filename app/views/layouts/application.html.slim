@@ -16,7 +16,9 @@ html
 
     = render "layouts/menu"
 
-    .container
+    .container ng-controller = "#{controller.controller_name.to_s + '-' + controller.action_name}"
+      = render "layouts/alerts"
 
       = yield
       = render "layouts/footer"
+

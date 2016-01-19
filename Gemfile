@@ -16,7 +16,9 @@ gem 'turbolinks'
 gem 'responders', '~> 2.0'
 gem 'angularjs-rails', '~> 1.2.25'
 gem 'angularjs-file-upload-rails'
+
 gem 'carrierwave'
+
 
 
 gem 'slim-rails', '3.0.1'

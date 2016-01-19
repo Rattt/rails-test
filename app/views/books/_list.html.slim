@@ -3,14 +3,19 @@ hr/
 table.table.table-bordered.table-striped
   thead
     tr
+      th Миниатюра
       th = t('activerecord.attributes.book.name')
       th = t('activerecord.attributes.book.description')
       th = t('activerecord.attributes.book.create_at')
       th = t('actions')
   tbody
     tr ng-show="!books.length"
-      td colspan="4"  = t('no_books')
+      td colspan="5"  = t('no_books')
     tr ng-repeat=("book in books | orderBy: '-created_at'")
+      td
+        div.thumb
+          img ng-src="{{book.cover_image.url}}"
+
       td
        | <a href="/books/{{ book.id}}/edit">{{ book.name }}</a>
       td

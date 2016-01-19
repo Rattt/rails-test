@@ -1,25 +1,40 @@
 class BooksController < ApplicationController
+  before_action :set_book, only: [:edit, :update]
   respond_to :json
 
   def index
+
     respond_to do |format|
       format.json { render json: Book.all }
       format.html
     end
+
   end
 
   def edit
-    @book = Book.find(params[:id])
   end
 
   def update
-    @book = Book.find(params[:id])
-    @book.update(book_params)
-    render nothing: true
+
+    @book.cover_image = params[:file] if params[:file].present?
+
+      if @book.update(book_params)
+        render :nothing => true, status: :ok
+      else
+         render json: @book.errors.to_a, status: :unprocessable_entity
+      end
+
   end
 
   def create
-    respond_with Book.create(book_params)
+
+    @book = Book.new(book_params)
+
+      if @book.save
+        render :json => @book, status: :created
+      else
+        render json: @book.errors.to_a, status: :unprocessable_entity
+      end
   end
 
   def destroy
@@ -28,8 +43,12 @@ class BooksController < ApplicationController
 
   private
 
+  def set_book
+    @book = Book.find(params[:id])
+  end
+
   def book_params
-    params.require(:book).permit(:name, :description, :cover_image, :create_at)
+    params.require(:book).permit(:name, :description, :create_at)
   end
 
 end

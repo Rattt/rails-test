@@ -9,4 +9,5 @@ class Book < ActiveRecord::Base
   def generate_timestamp
     self.create_at = DateTime.now
   end
+
 end

@@ -18,4 +18,7 @@
 //= require angularjs-file-upload
 //= require bootstrap-sprockets
 
+//= require ng-file-upload-shim/ng-file-upload-shim
+//= require ng-file-upload-shim/ng-file-upload
+
 //= require_tree .
