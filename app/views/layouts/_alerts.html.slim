@@ -4,3 +4,9 @@ div ng-repeat="msg in errorMsg" class="alert alert-danger alert-dismissible fade
     span aria-hidden="true" ×
   p
     | {{msg}}
+
+div ng-repeat="msg in successMsg" class="alert alert-success alert-dismissible fade in" role="alert"
+  button class="close" aria-label="Close" data-dismiss="alert" type="button"
+    span aria-hidden="true" ×
+  p
+  | {{msg}}

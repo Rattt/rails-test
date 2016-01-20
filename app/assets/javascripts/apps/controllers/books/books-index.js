@@ -10,8 +10,10 @@ BookShop.controller("books-index", function($scope, BookFactory, $window) {
             book.$promise
             .then(function(result) {
                 $scope.books.push(book)
+                $scope.successMsg = ['Запись добавлена'];
             }, function(errorMsg) {
                 $scope.errorMsg = errorMsg.data
+                // В вверх только при ошибке
                 $window.pageYOffset;
             });
 

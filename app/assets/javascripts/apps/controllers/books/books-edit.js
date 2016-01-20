@@ -20,9 +20,11 @@ BookShop.controller('books-edit', function ($scope, Upload, serverConfig, BookAp
             });
         }, function (response) {
             if (response.status > 0)
-                $window.pageYOffset;
                 $scope.errorMsg =  response.data;
+                // В вверх только при ошибке
+                $window.pageYOffset;
         }, function (evt) {
+            $scope.successMsg = ['Запись изменена'];
             // Math.min is to fix IE which reports 200% sometimes
             file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
         });
