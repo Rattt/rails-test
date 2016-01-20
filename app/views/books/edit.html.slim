@@ -6,10 +6,11 @@
 
   .well
     h3
-    form ng-submit="updateBook()"
+    form ng-submit="updateBook()" name="myForm"
       .row
         .col-xs-12
-          input type="file" ngf-select="" ng-model="file" name="cover_image" accept="image/*" ngf-max-size="2MB" required="" /
+          input type="file" ngf-select="" ng-model="file" name="file" accept="image/*" ngf-max-size="2MB" required="" /
+          img ng-show="myForm.file.$valid" ngf-thumbnail="file" class="preview"
         br/
       br/
       .row
@@ -29,6 +30,4 @@
           input.btn.btn-primary type="Submit" value=("#{t('action.edit')}") /
 
   = link_to t("action.back"), root_path
-
-
 
