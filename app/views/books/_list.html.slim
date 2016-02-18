@@ -17,7 +17,7 @@ table.table.table-bordered.table-striped
           img ng-src="{{book.cover_image.url}}"
 
       td
-       | <a href="/books/{{ book.id}}/edit">{{ book.name }}</a>
+       | <a ng-href="/books/{{ book.id}}/edit">{{ book.name }}</a>
       td
        | {{ book.description | limitTo:50 }}
       td
